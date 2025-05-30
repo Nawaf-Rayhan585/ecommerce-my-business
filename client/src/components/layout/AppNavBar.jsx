@@ -1,14 +1,22 @@
-import React from 'react';
-import { FiShoppingCart, FiHeart, FiSearch } from 'react-icons/fi';
+import React, { useState } from 'react';
+import { FiShoppingCart, FiHeart, FiSearch, FiChevronDown } from 'react-icons/fi';
 import '../../assets/css/appnavbar.css';
+import logo from '../../assets/images/logo.png'; // Adjust the path as necessary
 
 const AppNavBar = () => {
+  const [langOpen, setLangOpen] = useState(false);
+  const [selectedLang, setSelectedLang] = useState('English');
+
+  const handleLangSelect = (lang) => {
+    setSelectedLang(lang);
+    setLangOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
         <h1>
-          {/* You can add a logo icon here if you want */}
-          EduLord
+          Shukr
         </h1>
       </div>
       
@@ -17,13 +25,41 @@ const AppNavBar = () => {
         <a href="/products" className="nav-link">Products</a>
         <a href="/features" className="nav-link">Features</a>
         <a href="/about" className="nav-link">About</a>
-
-        <a href="/products" className="nav-link btn-link">Login</a>
-        <a href="/features" className="nav-link btn-link">Sign Up</a>
-        <a href="/about" className="nav-link btn-link">Language</a>
       </div>
 
-      
+      <div className="nav-menu-buttons">
+        <button className="menu-btn">Login</button>
+        <button className="menu-btn signup-btn">Sign Up</button>
+        <div
+          className={`lang-dropdown${langOpen ? ' open' : ''}`}
+          tabIndex={0}
+          onBlur={() => setLangOpen(false)}
+        >
+          <button
+            className="menu-btn lang-btn"
+            onClick={() => setLangOpen((prev) => !prev)}
+          >
+            {selectedLang}
+            <FiChevronDown className="lang-arrow" />
+          </button>
+          {langOpen && (
+            <div className="lang-options">
+              <div
+                className={`lang-option${selectedLang === 'English' ? ' selected' : ''}`}
+                onMouseDown={() => handleLangSelect('English')}
+              >
+                English
+              </div>
+              <div
+                className={`lang-option${selectedLang === 'Bangla' ? ' selected' : ''}`}
+                onMouseDown={() => handleLangSelect('Bangla')}
+              >
+                Bangla
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
 
       <div className="nav-search">
         <input

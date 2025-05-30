@@ -109,3 +109,103 @@
 .search-btn:hover {
   background: #ff385c;
 }
+
+.nav-menu-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 3rem; /* Increased gap from nav-links */
+}
+
+.menu-btn {
+  background: transparent;
+  border: 1.5px solid #949494;
+  color: #222;
+  padding: 8px 20px;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 
+    background 0.2s,
+    color 0.2s,
+    border 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  background: #f7f7f7;
+  color: #ff385c;
+  border: 1.5px solid #ff385c;
+  box-shadow: 0 2px 8px rgba(255,56,92,0.08);
+}
+
+.signup-btn {
+  background: #ff385c;
+  color: #fff;
+  border: 1.5px solid #ff385c;
+  margin-left: 4px;
+}
+
+.signup-btn:hover,
+.signup-btn:focus {
+  background: #fff;
+  color: #ff385c;
+  border: 1.5px solid #ff385c;
+}
+
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 100px;
+}
+
+.lang-arrow {
+  font-size: 1.1em;
+  margin-left: 4px;
+  transition: transform 0.2s;
+}
+
+.lang-dropdown.open .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  min-width: 120px;
+  z-index: 10;
+  padding: 6px 0;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.lang-option {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #222;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0.7rem;
+}
+
+.lang-option:hover,
+.lang-option.selected {
+  background: #ff385c;
+  color: #fff;
+}
