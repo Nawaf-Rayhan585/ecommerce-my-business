@@ -4,3 +4,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.btn-link {
+    background: #FF385C;
+    border: #FF385C 1px solid;
+    cursor: pointer;
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+    padding: 7px 20px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.btn-link:hover {
+    background: transparent;
+    transition: color 0.3s ease;
+    color: #FF385C !important;
+}
+
