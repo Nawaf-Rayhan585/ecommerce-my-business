@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout/layout.jsx'
-import Brands from '../components/product/brands.jsx'
+import TopProducts from '../components/product/topproducts.jsx'
 import Slider from '../components/product/slider.jsx'
 import Features from '../components/features/features.jsx'
 import Categories from '../components/product/categories.jsx'
@@ -11,10 +11,11 @@ const HomePage = () => {
   <Layout>
 
       <Slider/>
+      <TopProducts/>
       <Features/>
       <Categories/>
       <Products/>
-      <Brands/>
+
 
     </Layout>
   )

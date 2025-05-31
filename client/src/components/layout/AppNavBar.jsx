@@ -52,9 +52,9 @@ const AppNavBar = () => {
               </div>
               <div
                 className={`lang-option${selectedLang === 'Bangla' ? ' selected' : ''}`}
-                onMouseDown={() => handleLangSelect('Bangla')}
+                onMouseDown={() => handleLangSelect('বাংলা')}
               >
-                Bangla
+                বাংলা
               </div>
             </div>
           )}
