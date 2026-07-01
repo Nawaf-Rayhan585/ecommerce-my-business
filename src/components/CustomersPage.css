@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+.cp-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a1a;
+}
+
+/* Header */
+.cp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cp-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.cp-subtitle {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.cp-header-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cp-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.45rem 1rem;
+  background: #edf7f1;
+  border: 0.5px solid #d4eedf;
+  border-radius: 7px;
+  color: #2d8653;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cp-export-btn:hover { background: #dff2ea; }
+
+.cp-refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.45rem 1rem;
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 7px;
+  color: #888;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.cp-refresh-btn:hover { border-color: #bbb; color: #333; }
+
+/* Stats */
+.cp-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cp-stat-card {
+  flex: 1;
+  min-width: 160px;
+  background: #fff;
+  border: 0.5px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: box-shadow 0.15s;
+}
+
+.cp-stat-card:hover {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+.cp-stat-label {
+  font-size: 11px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.cp-stat-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Search */
+.cp-search-wrap {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.cp-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bbb;
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.cp-search {
+  width: 100%;
+  max-width: 380px;
+  padding: 0.55rem 0.9rem 0.55rem 2.25rem;
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 8px;
+  color: #333;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.cp-search:focus { border-color: #2d8653; }
+.cp-search::placeholder { color: #ccc; }
+
+/* Table */
+.cp-table-wrap {
+  overflow-x: auto;
+  border: 0.5px solid #e8e8e8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.cp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 900px;
+}
+
+.cp-table thead tr {
+  background: #fafafa;
+  border-bottom: 0.5px solid #f0f0f0;
+}
+
+.cp-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 11px;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+
+.cp-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 0.5px solid #f7f7f7;
+  vertical-align: middle;
+  color: #555;
+}
+
+.cp-table tbody tr:last-child td { border-bottom: none; }
+
+.cp-table tbody tr {
+  background: #fff;
+  transition: background 0.12s;
+}
+
+.cp-table tbody tr:hover { background: #fafafa; }
+.cp-editing-row          { background: #f4faf7 !important; }
+
+/* Cell styles */
+.cp-inv-badge {
+  background: #edf7f1;
+  color: #2d8653;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.cp-customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cp-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #edf7f1;
+  color: #2d8653;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cp-customer-name { color: #222; font-weight: 500; font-size: 13px; }
+.cp-customer-addr { color: #bbb; font-size: 11px; margin-top: 2px; }
+.cp-muted         { color: #bbb !important; }
+.cp-center        { text-align: center; }
+.cp-right         { text-align: right; }
+.cp-total         { color: #111 !important; font-weight: 600; }
+
+/* Inline edit inputs */
+.cp-input {
+  width: 120px;
+  padding: 0.35rem 0.6rem;
+  background: #f9f9f9;
+  border: 0.5px solid #e0e0e0;
+  border-radius: 6px;
+  color: #333;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.cp-input:focus { border-color: #2d8653; }
+.cp-input-sm    { width: 72px; }
+
+/* Action buttons */
+.cp-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cp-edit-btn, .cp-save-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  border: 0.5px solid #d4eedf;
+  background: #edf7f1;
+  color: #2d8653;
+  transition: background 0.12s;
+}
+
+.cp-edit-btn:hover, .cp-save-btn:hover { background: #dff2ea; }
+
+.cp-delete-btn, .cp-cancel-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  border: 0.5px solid #fad4d4;
+  background: #fdf0f0;
+  color: #c04444;
+  transition: background 0.12s;
+}
+
+.cp-delete-btn:hover, .cp-cancel-btn:hover { background: #f9e0e0; }
+.cp-cancel-lg { padding: 0.45rem 1.1rem; font-size: 13px; }
+
+/* Empty / loading */
+.cp-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #ccc;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Delete modal */
+.cp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.cp-modal {
+  background: #fff;
+  border: 0.5px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  max-width: 340px;
+  width: 90%;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+}
+
+.cp-modal-icon {
+  font-size: 32px;
+  color: #c04444;
+  margin-bottom: 0.75rem;
+}
+
+.cp-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.cp-modal-text {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.cp-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.cp-confirm-delete-btn {
+  padding: 0.5rem 1.25rem;
+  background: #fdf0f0;
+  border: 0.5px solid #fad4d4;
+  border-radius: 7px;
+  color: #c04444;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cp-confirm-delete-btn:hover { background: #f9e0e0; }
+
+/* Mobile */
+@media (max-width: 640px) {
+  .cp-wrapper  { padding: 1.25rem 1rem 3rem; }
+  .cp-title    { font-size: 18px; }
+  .cp-stat-value { font-size: 20px; }
+  .cp-header-actions { width: 100%; }
+  .cp-export-btn, .cp-refresh-btn { flex: 1; justify-content: center; }
+}
+
+/* Product pills with price breakdown */
+.cp-products-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cp-product-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #edf7f1;
+  border: 0.5px solid #d4eedf;
+  border-radius: 6px;
+  padding: 3px 8px;
+  width: fit-content;
+}
+
+.cp-pill-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a5c38;
+}
+
+.cp-pill-qty {
+  font-size: 11px;
+  color: #5a9a78;
+  background: #d4eedf;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+.cp-pill-price {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2d8653;
+}
+
+/* Header actions */
+.cp-header-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.cp-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.45rem 1rem;
+  background: #edf7f1;
+  border: 0.5px solid #d4eedf;
+  border-radius: 7px;
+  color: #2d8653;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cp-export-btn:hover { background: #dff2ea; }

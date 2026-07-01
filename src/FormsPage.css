@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f3ef;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.forms-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f3ef;
+  padding: 2rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.forms-page-form {
+  background: #fff;
+  border: 0.5px solid #e2e0da;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 670px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.forms-page-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.35rem;
+}
+
+.forms-page-form h2 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.75rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.forms-page-form h2 strong { font-weight: 600; }
+
+.form-divider {
+  width: 100%;
+  height: 0.5px;
+  background: #e2e0da;
+  margin: 0.25rem 0 1.25rem;
+}
+
+.form-section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.5px solid #e2e0da;
+  margin-bottom: 0.85rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.9rem;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.6rem 0.75rem;
+  border: 0.5px solid #e2e0da;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  background: #f9f8f5;
+  color: #1a1a1a;
+  transition: border-color 0.15s, background 0.15s;
+  outline: none;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #aaa;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
+}
+
+.form-group input[type='number'] {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+}
+
+.form-group textarea {
+  min-height: 72px;
+  line-height: 1.5;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-row .form-group { flex: 1; }
+
+/* ── Advance percentage row ── */
+.form-advance-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-advance-pct-input {
+  width: 80px !important;
+  flex-shrink: 0;
+}
+
+.form-advance-pills {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.form-advance-pill {
+  padding: 0.3rem 0.65rem;
+  border: 0.5px solid #e2e0da;
+  border-radius: 20px;
+  background: #f9f8f5;
+  color: #888;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  line-height: 1;
+}
+
+.form-advance-pill:hover {
+  border-color: #aaa;
+  color: #333;
+  background: #f0efe9;
+}
+
+.form-advance-pill.active {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #fff;
+}
+
+/* ── Multi-item rows ── */
+.form-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #fafaf8;
+  border: 0.5px solid #e2e0da;
+  border-radius: 10px;
+  padding: 0.85rem 0.85rem 0.1rem;
+  margin-bottom: 0.65rem;
+  position: relative;
+}
+
+.form-item-number {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #efefed;
+  color: #999;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.form-item-fields {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-item-subtotal {
+  padding: 0.6rem 0.75rem;
+  border: 0.5px solid #e2e0da;
+  border-radius: 8px;
+  background: #f1f0ec;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.form-remove-btn {
+  background: none;
+  border: 0.5px solid #e2e0da;
+  border-radius: 6px;
+  color: #bbb;
+  font-size: 18px;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.form-remove-btn:hover {
+  border-color: #f0a0a0;
+  color: #c04444;
+  background: #fff5f5;
+}
+
+/* ── Add item button ── */
+.form-add-btn {
+  width: 100%;
+  padding: 0.65rem;
+  background: none;
+  border: 0.5px dashed #d0cec8;
+  border-radius: 8px;
+  color: #aaa;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  margin-bottom: 0.5rem;
+}
+
+.form-add-btn:hover {
+  border-color: #aaa;
+  color: #555;
+  background: #fafaf8;
+}
+
+/* ── Order summary ── */
+.form-summary {
+  background: #fafaf8;
+  border: 0.5px solid #e2e0da;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #888;
+}
+
+.form-summary-total {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  border-top: 0.5px solid #e2e0da;
+  padding-top: 0.4rem;
+  margin-top: 0.2rem;
+}
+
+.form-summary-advance {
+  color: #2d6a4f;
+  font-weight: 500;
+  border-top: 0.5px dashed #d0e8db;
+  padding-top: 0.4rem;
+  margin-top: 0.1rem;
+}
+
+.form-summary-due {
+  color: #b45309;
+  font-weight: 500;
+}
+
+/* ── Submit button ── */
+.forms-page-btn {
+  margin-top: 1.25rem;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  padding: 0.8rem 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: opacity 0.15s, transform 0.1s;
+  width: 100%;
+}
+
+.forms-page-btn:hover  { opacity: 0.82; }
+.forms-page-btn:active { transform: scale(0.99); }
+
+@media (max-width: 600px) {
+  .form-row         { flex-direction: column; gap: 0; }
+  .forms-page-form  { padding: 1.5rem 1rem; }
+  .form-item-row    { flex-wrap: wrap; }
+  .form-advance-row { flex-direction: column; align-items: flex-start; }
+}
